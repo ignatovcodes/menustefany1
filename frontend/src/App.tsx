@@ -14,6 +14,7 @@ export function App({ onReady }: { onReady?: () => void }) {
     <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/booking" element={<Booking />} />

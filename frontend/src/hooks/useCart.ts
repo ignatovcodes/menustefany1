@@ -14,7 +14,11 @@ export function useCart() {
   });
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    } catch {
+      // localStorage недоступен (приватный режим, webview MAX)
+    }
   }, [items]);
 
   const addItem = (item: MenuItem, quantity = 1) => {
