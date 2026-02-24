@@ -13,6 +13,9 @@ const root = document.getElementById('root')!;
 const loader = document.getElementById('load');
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <App onReady={() => { loader?.remove(); }}/>
+    <App onReady={() => {
+      loader?.remove();
+      try { (window as unknown as { WebApp?: { ready: () => void } }).WebApp?.ready(); } catch (_) {}
+    }}/>
   </React.StrictMode>
 );

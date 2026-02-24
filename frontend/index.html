@@ -16,7 +16,14 @@
   <body>
     <div id="load"><div style="font-size:1.5rem;color:#c4a265;font-weight:600">Stephania Garden</div><p>Загрузка...</p></div>
     <div id="root"></div>
-    <script src="https://web.max.ru/sdk/max-web-app.js"></script>
+    <script>
+      (function(){
+        function tellMaxReady(){ try{ if(window.WebApp&&window.WebApp.ready){ window.WebApp.ready(); return true; } }catch(e){} return false; }
+        if(document.readyState!=='loading') tellMaxReady();
+        else document.addEventListener('DOMContentLoaded',tellMaxReady);
+        window.addEventListener('load',function(){ tellMaxReady(); setTimeout(tellMaxReady,50); setTimeout(tellMaxReady,200); });
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

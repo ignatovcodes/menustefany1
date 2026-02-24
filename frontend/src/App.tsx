@@ -9,11 +9,7 @@ import './styles/globals.css';
 
 // HashRouter — совместим с webview MAX
 export function App({ onReady }: { onReady?: () => void }) {
-  useEffect(() => {
-    onReady?.();
-    // Обязательно для MAX: сообщаем клиенту, что приложение готово (иначе на iOS — белый экран или "нет сети")
-    (window as unknown as { WebApp?: { ready: () => void } }).WebApp?.ready?.();
-  }, [onReady]);
+  useEffect(() => { onReady?.(); }, [onReady]);
   return (
     <HashRouter>
       <Routes>
