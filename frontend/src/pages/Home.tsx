@@ -43,12 +43,9 @@ export function Home() {
   return (
     <div className="min-h-screen bg-dark-bg flex flex-col items-center justify-center px-6 pb-24">
       <div className="text-center mb-12">
-        <div className="flex justify-center mb-6">
-          <img src="/logo.svg" alt="Stephania Garden" className="h-16 w-auto" />
-        </div>
-        <h1 className="font-display text-4xl font-semibold text-gold tracking-wide mb-1">Stephania Garden</h1>
-        <p className="text-gray-400 text-sm tracking-widest uppercase">Краснодар · Кубанская наб., 186/1</p>
-        <p className="text-gray-500 text-sm mt-2">Европейская · Кавказская · Японская кухня</p>
+        <img src="/logo.svg" alt="Stephania Garden" className="h-20 w-auto mx-auto mb-8" />
+        <p className="text-gold/90 text-sm tracking-wide mb-1">г. Краснодар, Кубанская наб., 186/1</p>
+        <a href="tel:+79883535735" className="text-gold text-base font-medium webapp-button">+7 (988) 353-57-35</a>
       </div>
 
       <div className="w-full max-w-md space-y-4">

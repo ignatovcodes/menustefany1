@@ -26,7 +26,7 @@ export function Menu() {
           onSelect={setActiveCategory}
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 menu-grid">
           {filteredItems.map((item) => {
             const cartItem = items.find((i) => i.id === item.id);
             const quantity = cartItem?.quantity ?? 0;

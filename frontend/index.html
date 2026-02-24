@@ -5,12 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#1a1a1a" />
-    <title>Stephania Garden — Ресторан · Краснодар</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Stephania Garden</title>
+    <style>
+      body{margin:0;background:#1a1a1a;color:#fff;font-family:system-ui,-apple-system,sans-serif;min-height:100vh}
+      #load{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;z-index:9999}
+      #load p{color:#c4a265;margin-top:1rem;font-size:0.9rem}
+    </style>
   </head>
   <body>
+    <div id="load"><div style="font-size:1.5rem;color:#c4a265;font-weight:600">Stephania Garden</div><p>Загрузка...</p></div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

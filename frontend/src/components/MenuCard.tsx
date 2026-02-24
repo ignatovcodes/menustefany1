@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { MenuItem } from '../types';
 
 interface MenuCardProps {
@@ -8,15 +9,20 @@ interface MenuCardProps {
   onDecrement: () => void;
 }
 
+const PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' fill='%23333'%3E%3Crect width='400' height='300' fill='%23252525'/%3E%3Cpath d='M200 120l-60 80h120z' fill='%23c4a265' opacity='0.5'/%3E%3C/svg%3E";
+
 export function MenuCard({ item, quantity, onAdd, onRemove, onDecrement }: MenuCardProps) {
+  const [imgError, setImgError] = useState(false);
   return (
-    <div className="bg-dark-card rounded-xl overflow-hidden shadow-lg border border-dark-border transition-transform hover:scale-[1.02]">
-      <div className="aspect-[4/3] overflow-hidden bg-dark-border">
+    <div className="bg-dark-card rounded-xl overflow-hidden shadow-lg border border-dark-border">
+      <div className="aspect-[4/3] overflow-hidden bg-dark-border relative">
         <img
-          src={item.image}
+          src={imgError ? PLACEHOLDER : item.image}
           alt={item.name}
           className="w-full h-full object-cover"
           loading="lazy"
+          decoding="async"
+          onError={() => setImgError(true)}
         />
       </div>
       <div className="p-4">

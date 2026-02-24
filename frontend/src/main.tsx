@@ -9,8 +9,10 @@ if (chatId) {
   (window as unknown as { maxChatId?: string }).maxChatId = chatId;
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const root = document.getElementById('root')!;
+const loader = document.getElementById('load');
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <App />
+    <App onReady={() => { loader?.remove(); }}/>
   </React.StrictMode>
 );

@@ -8,16 +8,18 @@
 
 html {
   -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
   margin: 0;
-  font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   background-color: #1a1a1a;
   color: #fff;
   min-height: 100vh;
   min-height: 100dvh;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 #root {
@@ -51,4 +53,9 @@ body {
 .webapp-button {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+}
+
+/* Плавная прокрутка меню на iOS/Android */
+.menu-grid {
+  contain: layout;
 }

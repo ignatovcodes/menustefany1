@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Menu } from './pages/Menu';
@@ -6,8 +7,9 @@ import { Booking } from './pages/Booking';
 import { CallWaiter } from './pages/CallWaiter';
 import './styles/globals.css';
 
-// HashRouter — совместим с webview MAX, не теряет state при навигации
-export function App() {
+// HashRouter — совместим с webview MAX
+export function App({ onReady }: { onReady?: () => void }) {
+  useEffect(() => { onReady?.(); }, [onReady]);
   return (
     <HashRouter>
       <Routes>

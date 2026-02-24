@@ -19,8 +19,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Montserrat', 'system-ui', 'sans-serif'],
-        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        sans: ['system-ui', '-apple-system', 'sans-serif'],
+        display: ['Georgia', 'serif'],
       },
     },
   },
