@@ -16,7 +16,7 @@ export function Menu() {
     <div className="min-h-screen bg-dark-bg pb-32">
       <header className="sticky top-0 z-40 bg-dark-bg/95 backdrop-blur border-b border-dark-border px-4 py-4">
         <BackButton to="/" />
-        <h1 className="font-display text-2xl font-semibold text-gold mt-2">Меню и заказ</h1>
+        <h1 className="font-display text-2xl font-semibold text-white mt-2">Меню и заказ</h1>
       </header>
 
       <div className="px-4 pt-4">

@@ -6,24 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#1a1a1a" />
     <meta name="format-detection" content="telephone=no" />
-    <title>Stephania Garden</title>
+    <title>СТЕФАНИЯ</title>
     <style>
       body{margin:0;background:#1a1a1a;color:#fff;font-family:system-ui,-apple-system,sans-serif;min-height:100vh}
       #load{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;z-index:9999}
-      #load p{color:#c4a265;margin-top:1rem;font-size:0.9rem}
+      #load p{color:#ffffff;margin-top:1rem;font-size:0.9rem}
     </style>
   </head>
   <body>
-    <div id="load"><div style="font-size:1.5rem;color:#c4a265;font-weight:600">Stephania Garden</div><p>Загрузка...</p></div>
+    <div id="load"><div style="font-size:1.5rem;color:#ffffff;font-weight:600">СТЕФАНИЯ</div><p>Загрузка...</p></div>
     <div id="root"></div>
-    <script>
-      (function(){
-        function tellMaxReady(){ try{ if(window.WebApp&&window.WebApp.ready){ window.WebApp.ready(); return true; } }catch(e){} return false; }
-        if(document.readyState!=='loading') tellMaxReady();
-        else document.addEventListener('DOMContentLoaded',tellMaxReady);
-        window.addEventListener('load',function(){ tellMaxReady(); setTimeout(tellMaxReady,50); setTimeout(tellMaxReady,200); });
-      })();
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
